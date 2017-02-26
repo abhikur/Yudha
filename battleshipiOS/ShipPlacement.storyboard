@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16D32" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Ship PlacementVC-->
+        <scene sceneID="2zW-od-bkU">
+            <objects>
+                <viewController storyboardIdentifier="shipPlacement" id="QS1-9l-KYs" customClass="ShipPlacementVC" customModule="battleshipiOS" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OKc-8U-Vve"/>
+                        <viewControllerLayoutGuide type="bottom" id="FgX-8P-z6W"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="RoB-sq-lkH">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-fL-fXi">
+                                <rect key="frame" x="8" y="74" width="359" height="405"/>
+                                <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                                <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="34X-MF-VMg">
+                                    <size key="itemSize" width="30" height="30"/>
+                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                    <inset key="sectionInset" minX="0.0" minY="3" maxX="0.0" maxY="0.0"/>
+                                </collectionViewFlowLayout>
+                                <cells>
+                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="shipPlacementCell" id="bFA-y5-Rew" customClass="ShipPlacementCell" customModule="battleshipiOS" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="3" width="30" height="30"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                        </view>
+                                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    </collectionViewCell>
+                                </cells>
+                            </collectionView>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Place your ships" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="J2g-z8-DJB">
+                                <rect key="frame" x="24" y="40" width="327" height="24"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-7g-OiN">
+                                <rect key="frame" x="8" y="489" width="155" height="29"/>
+                                <segments>
+                                    <segment title="Horizontal"/>
+                                    <segment title="Vertical"/>
+                                </segments>
+                            </segmentedControl>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Zb-9Jk">
+                                <rect key="frame" x="292" y="489" width="75" height="30"/>
+                                <state key="normal" title="select ship"/>
+                                <connections>
+                                    <action selector="openShipSelectionView:" destination="QS1-9l-KYs" eventType="touchUpInside" id="Fih-hh-0zG"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstItem="fQj-fL-fXi" firstAttribute="top" secondItem="J2g-z8-DJB" secondAttribute="bottom" constant="10" id="1if-bF-Ye1"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="J2g-z8-DJB" secondAttribute="trailing" constant="8" id="7Nc-wf-pnT"/>
+                            <constraint firstItem="zjk-7g-OiN" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leading" constant="8" id="8OK-l1-CaP"/>
+                            <constraint firstItem="J2g-z8-DJB" firstAttribute="top" secondItem="OKc-8U-Vve" secondAttribute="bottom" constant="20" id="BbA-55-KOg"/>
+                            <constraint firstItem="fQj-fL-fXi" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leading" constant="8" id="FsB-45-T8E"/>
+                            <constraint firstItem="J2g-z8-DJB" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leadingMargin" constant="8" id="MDt-8o-HOK"/>
+                            <constraint firstItem="zjk-7g-OiN" firstAttribute="top" secondItem="fQj-fL-fXi" secondAttribute="bottom" constant="10" id="SOf-mw-33D"/>
+                            <constraint firstItem="pNQ-Zb-9Jk" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="top" id="Wdx-SU-zgC"/>
+                            <constraint firstAttribute="trailing" secondItem="fQj-fL-fXi" secondAttribute="trailing" constant="8" id="bq7-ky-l6L"/>
+                            <constraint firstItem="FgX-8P-z6W" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="bottom" constant="150" id="ryg-Kn-M0k"/>
+                            <constraint firstItem="pNQ-Zb-9Jk" firstAttribute="trailing" secondItem="fQj-fL-fXi" secondAttribute="trailing" id="yf2-NG-53h"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="alignmentControl" destination="zjk-7g-OiN" id="gL3-xb-jO2"/>
+                        <outlet property="collectionView" destination="fQj-fL-fXi" id="7XD-jf-cBW"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="vZH-JM-4ew" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="133.59999999999999" y="63.418290854572717"/>
+        </scene>
+    </scenes>
+</document>
