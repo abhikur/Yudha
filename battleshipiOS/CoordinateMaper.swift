@@ -35,7 +35,14 @@ extension String {
         })
     }
     
-    func toInt() -> Int {
-        return Int(self)
+    func splitIntoInt() -> [Int] {
+        var nums: [Int] = self.characters.map({
+            return Int($0.description)!
+        })
+        if nums.count == 1 {
+            nums.append(0)
+            nums.reverse()
+        }
+        return nums
     }
 }

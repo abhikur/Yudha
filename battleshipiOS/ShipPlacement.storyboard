@@ -56,13 +56,6 @@
                                     <segment title="Vertical"/>
                                 </segments>
                             </segmentedControl>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pNQ-Zb-9Jk">
-                                <rect key="frame" x="292" y="489" width="75" height="30"/>
-                                <state key="normal" title="select ship"/>
-                                <connections>
-                                    <action selector="openShipSelectionView:" destination="QS1-9l-KYs" eventType="touchUpInside" id="Fih-hh-0zG"/>
-                                </connections>
-                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
@@ -73,10 +66,8 @@
                             <constraint firstItem="fQj-fL-fXi" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leading" constant="8" id="FsB-45-T8E"/>
                             <constraint firstItem="J2g-z8-DJB" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leadingMargin" constant="8" id="MDt-8o-HOK"/>
                             <constraint firstItem="zjk-7g-OiN" firstAttribute="top" secondItem="fQj-fL-fXi" secondAttribute="bottom" constant="10" id="SOf-mw-33D"/>
-                            <constraint firstItem="pNQ-Zb-9Jk" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="top" id="Wdx-SU-zgC"/>
                             <constraint firstAttribute="trailing" secondItem="fQj-fL-fXi" secondAttribute="trailing" constant="8" id="bq7-ky-l6L"/>
                             <constraint firstItem="FgX-8P-z6W" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="bottom" constant="150" id="ryg-Kn-M0k"/>
-                            <constraint firstItem="pNQ-Zb-9Jk" firstAttribute="trailing" secondItem="fQj-fL-fXi" secondAttribute="trailing" id="yf2-NG-53h"/>
                         </constraints>
                     </view>
                     <connections>

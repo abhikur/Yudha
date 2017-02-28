@@ -6,6 +6,7 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     @IBOutlet weak var alignmentControl: UISegmentedControl?
     var placedShips = [String]()
     let cells = Cells().cells
+    var ships = [2,2,3,4,5];
     
     var name: String = "ship placement view controller"
     override func viewDidLoad() {
@@ -42,26 +43,27 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+    
         var parameters: [String: Any] = [:]
-        parameters["shipSize"] = 5
+        parameters["shipSize"] = ships.popLast()
         parameters["align"] = alignmentControl?.selectedSegmentIndex == 0 ? "horizontal" : "vertical"
         let coord: String = CoordinateMaper().mapToAlpha(numericCoord: "\(indexPath.section)\(indexPath.item + 1)")
         parameters["coordinate"] = coord
-        let url = URL(string: "http://localhost:5000/placingOfShip")
+        let url = URL(string: localizedString("placingOfShips", table: "urls"))
         Webservice().post(url: url!, parameters: parameters, completion: { res in
             if let coords = res.result.value as? [String] {
                 coords.forEach({ (coord) in
-                    let numericCoord: IndexPath.Element = CoordinateMaper().mapToNumeric(alphaCoord: coord).toInt()
-                    let cell = collectionView.cellForItem(at: IndexPath(index: numericCoord))
+                    let numericCoord: String = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+                    let nums:[Int] = numericCoord.splitIntoInt()
+                    let cell = collectionView.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
                     cell?.backgroundColor = UIColor.red
                 })
                 self.placedShips.append(contentsOf: coords)
+                if self.ships.count == 0 {
+                    let alertController = UIAlertController(title: "Ready", message: "waiting for enemy", preferredStyle: .alert)
+                    self.present(alertController, animated: true, completion: nil)
+                }
             }
         })
-    }
-    
-    @IBAction func openShipSelectionView(_ sender: UIButton) {
-//        let shipSelectionVC = UIStoryboard(name: "ShipSelection", bundle: nil).instantiateViewController(withIdentifier: "shipSelect")
-//        present(shipSelectionVC, animated: true, completion: nil)
     }
 }
