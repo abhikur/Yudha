@@ -11,11 +11,18 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
         super.viewDidLoad()
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        layoutCells()
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        if let flowLayout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            flowLayout.estimatedItemSize = CGSize(width: 35, height: 35)
+    func layoutCells() {
+        collectionView?.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
+        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
+            let minSpaceBetweenItems: CGFloat = 1
+            let minSpaceBetweenLines: CGFloat = 1
+            layout.minimumLineSpacing = minSpaceBetweenLines
+            layout.minimumInteritemSpacing = minSpaceBetweenItems
+            let cellWidth: CGFloat = (self.view.bounds.width - 16 - (9 * minSpaceBetweenItems)) / 10
+            layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
         }
     }
 
@@ -24,11 +31,15 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
 
     }
     
-    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+    override func viewWillLayoutSubviews() {
+        collectionView?.collectionViewLayout.invalidateLayout()
     }
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
+        return 10
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return 10
     }
     
@@ -54,7 +65,6 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
                     let cell = collectionView.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
                     cell?.backgroundColor = UIColor.red
                 })
-//                self.placedShips.append(contentsOf: coords)
                 if self.ships.count == 0 {
                     print("player is ready ")
                     Webservice().get(url: URL(string:localizedString("makeReady", table: "urls"))!, completion: { (res) in

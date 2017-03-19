@@ -23,7 +23,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" verticalCompressionResistancePriority="1000" scrollEnabled="NO" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="fQj-fL-fXi">
-                                <rect key="frame" x="8" y="74" width="359" height="405"/>
+                                <rect key="frame" x="8" y="74" width="359" height="507"/>
                                 <color key="backgroundColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="3" minimumInteritemSpacing="3" id="34X-MF-VMg">
                                     <size key="itemSize" width="30" height="30"/>
@@ -50,7 +50,7 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="zjk-7g-OiN">
-                                <rect key="frame" x="8" y="489" width="155" height="29"/>
+                                <rect key="frame" x="8" y="589" width="155" height="29"/>
                                 <segments>
                                     <segment title="Horizontal"/>
                                     <segment title="Vertical"/>
@@ -65,9 +65,9 @@
                             <constraint firstItem="J2g-z8-DJB" firstAttribute="top" secondItem="OKc-8U-Vve" secondAttribute="bottom" constant="20" id="BbA-55-KOg"/>
                             <constraint firstItem="fQj-fL-fXi" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leading" constant="8" id="FsB-45-T8E"/>
                             <constraint firstItem="J2g-z8-DJB" firstAttribute="leading" secondItem="RoB-sq-lkH" secondAttribute="leadingMargin" constant="8" id="MDt-8o-HOK"/>
-                            <constraint firstItem="zjk-7g-OiN" firstAttribute="top" secondItem="fQj-fL-fXi" secondAttribute="bottom" constant="10" id="SOf-mw-33D"/>
+                            <constraint firstItem="zjk-7g-OiN" firstAttribute="top" secondItem="fQj-fL-fXi" secondAttribute="bottom" constant="8" id="SOf-mw-33D"/>
                             <constraint firstAttribute="trailing" secondItem="fQj-fL-fXi" secondAttribute="trailing" constant="8" id="bq7-ky-l6L"/>
-                            <constraint firstItem="FgX-8P-z6W" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="bottom" constant="150" id="ryg-Kn-M0k"/>
+                            <constraint firstItem="FgX-8P-z6W" firstAttribute="top" secondItem="zjk-7g-OiN" secondAttribute="bottom" constant="50" id="gan-Ti-0aW"/>
                         </constraints>
                     </view>
                     <connections>
