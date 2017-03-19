@@ -5,15 +5,12 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     @IBOutlet weak var collectionView: UICollectionView?
     @IBOutlet weak var alignmentControl: UISegmentedControl?
     var placedShips = [String]()
-    let cells = Cells().cells
-    var ships = [2,2,3,4,5];
+    var ships = [2,3,3,4,5];
     
-    var name: String = "ship placement view controller"
     override func viewDidLoad() {
         super.viewDidLoad()
         collectionView?.delegate = self
         collectionView?.dataSource = self
-    
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -36,7 +33,6 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        // cells will be intialise here with id and index number
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "shipPlacementCell", for: indexPath) as? ShipPlacementCell
         cell?.configureCell(cellId: "\(indexPath.section)\(indexPath.item)")
         return cell!
@@ -58,10 +54,18 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
                     let cell = collectionView.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
                     cell?.backgroundColor = UIColor.red
                 })
-                self.placedShips.append(contentsOf: coords)
+//                self.placedShips.append(contentsOf: coords)
                 if self.ships.count == 0 {
-                    let alertController = UIAlertController(title: "Ready", message: "waiting for enemy", preferredStyle: .alert)
-                    self.present(alertController, animated: true, completion: nil)
+                    print("player is ready ")
+                    Webservice().get(url: URL(string:localizedString("makeReady", table: "urls"))!, completion: { (res) in
+                        if let resData = res.result.value as? [String: Any] {
+                            print(resData)
+                        }
+                        else {
+                            let alertController = Alert.makeWithoutAction(title: "Ready...", msg: "let the enemy ready")
+                            self.present(alertController, animated: true, completion: nil)
+                        }
+                    })
                 }
             }
         })

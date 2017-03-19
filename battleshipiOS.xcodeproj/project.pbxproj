@@ -12,6 +12,7 @@
 		D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1911E62AF05000FCBFC /* CoordinateMaper.swift */; };
 		D324E1951E62B854000FCBFC /* CoordinateMaperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */; };
 		D324E1971E62D307000FCBFC /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1961E62D307000FCBFC /* Cells.swift */; };
+		D34C373F1E7DAF23002817EC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C373E1E7DAF23002817EC /* Alert.swift */; };
 		D39F753C1E60BE8E00669FF8 /* ShipPlacement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39F753B1E60BE8E00669FF8 /* ShipPlacement.storyboard */; };
 		D39F75401E60BF1400669FF8 /* ShipPlacementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F753F1E60BF1400669FF8 /* ShipPlacementVC.swift */; };
 		D39F75421E61498100669FF8 /* ShipPlacementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F75411E61498100669FF8 /* ShipPlacementCell.swift */; };
@@ -47,6 +48,7 @@
 		D324E1911E62AF05000FCBFC /* CoordinateMaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateMaper.swift; sourceTree = "<group>"; };
 		D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateMaperSpec.swift; sourceTree = "<group>"; };
 		D324E1961E62D307000FCBFC /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
+		D34C373E1E7DAF23002817EC /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D39F753B1E60BE8E00669FF8 /* ShipPlacement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShipPlacement.storyboard; sourceTree = "<group>"; };
 		D39F753F1E60BF1400669FF8 /* ShipPlacementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPlacementVC.swift; sourceTree = "<group>"; };
 		D39F75411E61498100669FF8 /* ShipPlacementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPlacementCell.swift; sourceTree = "<group>"; };
@@ -186,6 +188,7 @@
 			children = (
 				D3CF7F741E50746D001F9B7A /* LocalizedString.swift */,
 				D324E1911E62AF05000FCBFC /* CoordinateMaper.swift */,
+				D34C373E1E7DAF23002817EC /* Alert.swift */,
 			);
 			name = utils;
 			sourceTree = "<group>";
@@ -414,6 +417,7 @@
 				D3CF7F501E503E5E001F9B7A /* AppDelegate.swift in Sources */,
 				D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */,
 				D39F754A1E61D44900669FF8 /* ShipSelectionVC.swift in Sources */,
+				D34C373F1E7DAF23002817EC /* Alert.swift in Sources */,
 				D3CF7F711E505E41001F9B7A /* Webservice.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

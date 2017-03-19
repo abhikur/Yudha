@@ -3,7 +3,7 @@ import Alamofire
 
 class Webservice {
     
-    func get(url: URL, completion: @escaping (_ jsonRes: Any) -> Void) {
+    func get(url: URL, completion: @escaping (_ jsonRes: DataResponse<Any>) -> Void) {
         Alamofire.request(url)
             .responseJSON { (res) in
                 completion(res)

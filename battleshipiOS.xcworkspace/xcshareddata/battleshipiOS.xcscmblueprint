@@ -1,0 +1,30 @@
+{
+  "DVTSourceControlWorkspaceBlueprintPrimaryRemoteRepositoryKey" : "3E4E12CD29E134BBB7C8F36221214A2C82FC1827",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyRepositoryLocationsKey" : {
+
+  },
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyStatesKey" : {
+    "3E4E12CD29E134BBB7C8F36221214A2C82FC1827" : 9223372036854775807,
+    "A0105879D2B801136290121A9D6F1F17EF5E02C0" : 9223372036854775807
+  },
+  "DVTSourceControlWorkspaceBlueprintIdentifierKey" : "A016E77F-7B42-4887-878B-715D16A711F7",
+  "DVTSourceControlWorkspaceBlueprintWorkingCopyPathsKey" : {
+    "3E4E12CD29E134BBB7C8F36221214A2C82FC1827" : "battleshipiOS\/",
+    "A0105879D2B801136290121A9D6F1F17EF5E02C0" : ""
+  },
+  "DVTSourceControlWorkspaceBlueprintNameKey" : "battleshipiOS",
+  "DVTSourceControlWorkspaceBlueprintVersion" : 204,
+  "DVTSourceControlWorkspaceBlueprintRelativePathToProjectKey" : "battleshipiOS.xcworkspace",
+  "DVTSourceControlWorkspaceBlueprintRemoteRepositoriesKey" : [
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "github.com:abhikur\/Yudha.git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "3E4E12CD29E134BBB7C8F36221214A2C82FC1827"
+    },
+    {
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryURLKey" : "ssh:\/\/battleship-step2015.rhcloud.com\/~\/git\/battleship.git\/",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositorySystemKey" : "com.apple.dt.Xcode.sourcecontrol.Git",
+      "DVTSourceControlWorkspaceBlueprintRemoteRepositoryIdentifierKey" : "A0105879D2B801136290121A9D6F1F17EF5E02C0"
+    }
+  ]
+}
