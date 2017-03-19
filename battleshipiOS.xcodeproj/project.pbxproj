@@ -13,6 +13,10 @@
 		D324E1951E62B854000FCBFC /* CoordinateMaperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */; };
 		D324E1971E62D307000FCBFC /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1961E62D307000FCBFC /* Cells.swift */; };
 		D34C373F1E7DAF23002817EC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C373E1E7DAF23002817EC /* Alert.swift */; };
+		D34C37491E7EFC4F002817EC /* CollectionViewLayouter.h in Headers */ = {isa = PBXBuildFile; fileRef = D34C37471E7EFC4F002817EC /* CollectionViewLayouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		D34C374C1E7EFC4F002817EC /* CollectionViewLayouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */; };
+		D34C374D1E7EFC4F002817EC /* CollectionViewLayouter.framework in Embed Frameworks */ = {isa = PBXBuildFile; fileRef = D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
+		D34C37531E7EFD06002817EC /* Layouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C37521E7EFD06002817EC /* Layouter.swift */; };
 		D39F753C1E60BE8E00669FF8 /* ShipPlacement.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D39F753B1E60BE8E00669FF8 /* ShipPlacement.storyboard */; };
 		D39F75401E60BF1400669FF8 /* ShipPlacementVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F753F1E60BF1400669FF8 /* ShipPlacementVC.swift */; };
 		D39F75421E61498100669FF8 /* ShipPlacementCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = D39F75411E61498100669FF8 /* ShipPlacementCell.swift */; };
@@ -28,6 +32,13 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
+		D34C374A1E7EFC4F002817EC /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D3CF7F441E503E5E001F9B7A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = D34C37441E7EFC4F002817EC;
+			remoteInfo = CollectionViewLayouter;
+		};
 		D3CF7F611E503E5E001F9B7A /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
 			containerPortal = D3CF7F441E503E5E001F9B7A /* Project object */;
@@ -36,6 +47,20 @@
 			remoteInfo = battleshipiOS;
 		};
 /* End PBXContainerItemProxy section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		D34C37511E7EFC4F002817EC /* Embed Frameworks */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 10;
+			files = (
+				D34C374D1E7EFC4F002817EC /* CollectionViewLayouter.framework in Embed Frameworks */,
+			);
+			name = "Embed Frameworks";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
 		11A36F39C6E82B2D7918FCB1 /* Pods-battleshipiOS.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-battleshipiOS.debug.xcconfig"; path = "Pods/Target Support Files/Pods-battleshipiOS/Pods-battleshipiOS.debug.xcconfig"; sourceTree = "<group>"; };
@@ -47,6 +72,10 @@
 		D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateMaperSpec.swift; sourceTree = "<group>"; };
 		D324E1961E62D307000FCBFC /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		D34C373E1E7DAF23002817EC /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
+		D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionViewLayouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		D34C37471E7EFC4F002817EC /* CollectionViewLayouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayouter.h; sourceTree = "<group>"; };
+		D34C37481E7EFC4F002817EC /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		D34C37521E7EFD06002817EC /* Layouter.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Layouter.swift; sourceTree = "<group>"; };
 		D39F753B1E60BE8E00669FF8 /* ShipPlacement.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = ShipPlacement.storyboard; sourceTree = "<group>"; };
 		D39F753F1E60BF1400669FF8 /* ShipPlacementVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPlacementVC.swift; sourceTree = "<group>"; };
 		D39F75411E61498100669FF8 /* ShipPlacementCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShipPlacementCell.swift; sourceTree = "<group>"; };
@@ -67,10 +96,18 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		D34C37411E7EFC4F002817EC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3CF7F491E503E5E001F9B7A /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D34C374C1E7EFC4F002817EC /* CollectionViewLayouter.framework in Frameworks */,
 				02905F56DA4B59B3E2AFA14D /* Pods_battleshipiOS.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -103,6 +140,16 @@
 			name = utils;
 			sourceTree = "<group>";
 		};
+		D34C37461E7EFC4F002817EC /* CollectionViewLayouter */ = {
+			isa = PBXGroup;
+			children = (
+				D34C37471E7EFC4F002817EC /* CollectionViewLayouter.h */,
+				D34C37481E7EFC4F002817EC /* Info.plist */,
+				D34C37521E7EFD06002817EC /* Layouter.swift */,
+			);
+			path = CollectionViewLayouter;
+			sourceTree = "<group>";
+		};
 		D39F75391E60BE1A00669FF8 /* login */ = {
 			isa = PBXGroup;
 			children = (
@@ -128,6 +175,7 @@
 			children = (
 				D3CF7F4E1E503E5E001F9B7A /* battleshipiOS */,
 				D3CF7F631E503E5E001F9B7A /* battleshipiOSTests */,
+				D34C37461E7EFC4F002817EC /* CollectionViewLayouter */,
 				D3CF7F4D1E503E5E001F9B7A /* Products */,
 				F9F8DC39313B76E80F7B8D1B /* Pods */,
 				3641EEA29DDF0796152F9AB2 /* Frameworks */,
@@ -139,6 +187,7 @@
 			children = (
 				D3CF7F4C1E503E5E001F9B7A /* battleshipiOS.app */,
 				D3CF7F601E503E5E001F9B7A /* battleshipiOSTests.xctest */,
+				D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -200,7 +249,36 @@
 		};
 /* End PBXGroup section */
 
+/* Begin PBXHeadersBuildPhase section */
+		D34C37421E7EFC4F002817EC /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34C37491E7EFC4F002817EC /* CollectionViewLayouter.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
 /* Begin PBXNativeTarget section */
+		D34C37441E7EFC4F002817EC /* CollectionViewLayouter */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = D34C374E1E7EFC4F002817EC /* Build configuration list for PBXNativeTarget "CollectionViewLayouter" */;
+			buildPhases = (
+				D34C37401E7EFC4F002817EC /* Sources */,
+				D34C37411E7EFC4F002817EC /* Frameworks */,
+				D34C37421E7EFC4F002817EC /* Headers */,
+				D34C37431E7EFC4F002817EC /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = CollectionViewLayouter;
+			productName = CollectionViewLayouter;
+			productReference = D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */;
+			productType = "com.apple.product-type.framework";
+		};
 		D3CF7F4B1E503E5E001F9B7A /* battleshipiOS */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = D3CF7F691E503E5E001F9B7A /* Build configuration list for PBXNativeTarget "battleshipiOS" */;
@@ -211,10 +289,12 @@
 				D3CF7F4A1E503E5E001F9B7A /* Resources */,
 				2FDCF78BC80938B2088CD107 /* [CP] Embed Pods Frameworks */,
 				AE304CB7BC4BF0CC20B1BFE1 /* [CP] Copy Pods Resources */,
+				D34C37511E7EFC4F002817EC /* Embed Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
+				D34C374B1E7EFC4F002817EC /* PBXTargetDependency */,
 			);
 			name = battleshipiOS;
 			productName = battleshipiOS;
@@ -252,6 +332,11 @@
 				LastUpgradeCheck = 0810;
 				ORGANIZATIONNAME = "Abhishek Thakur";
 				TargetAttributes = {
+					D34C37441E7EFC4F002817EC = {
+						CreatedOnToolsVersion = 8.1;
+						LastSwiftMigration = 0810;
+						ProvisioningStyle = Automatic;
+					};
 					D3CF7F4B1E503E5E001F9B7A = {
 						CreatedOnToolsVersion = 8.1;
 						ProvisioningStyle = Automatic;
@@ -278,11 +363,19 @@
 			targets = (
 				D3CF7F4B1E503E5E001F9B7A /* battleshipiOS */,
 				D3CF7F5F1E503E5E001F9B7A /* battleshipiOSTests */,
+				D34C37441E7EFC4F002817EC /* CollectionViewLayouter */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		D34C37431E7EFC4F002817EC /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3CF7F4A1E503E5E001F9B7A /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -398,6 +491,14 @@
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		D34C37401E7EFC4F002817EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D34C37531E7EFD06002817EC /* Layouter.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		D3CF7F481E503E5E001F9B7A /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -426,6 +527,11 @@
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXTargetDependency section */
+		D34C374B1E7EFC4F002817EC /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = D34C37441E7EFC4F002817EC /* CollectionViewLayouter */;
+			targetProxy = D34C374A1E7EFC4F002817EC /* PBXContainerItemProxy */;
+		};
 		D3CF7F621E503E5E001F9B7A /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
 			target = D3CF7F4B1E503E5E001F9B7A /* battleshipiOS */;
@@ -453,6 +559,53 @@
 /* End PBXVariantGroup section */
 
 /* Begin XCBuildConfiguration section */
+		D34C374F1E7EFC4F002817EC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CollectionViewLayouter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhishek.CollectionViewLayouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Debug;
+		};
+		D34C37501E7EFC4F002817EC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				APPLICATION_EXTENSION_API_ONLY = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "";
+				CURRENT_PROJECT_VERSION = 1;
+				DEFINES_MODULE = YES;
+				DYLIB_COMPATIBILITY_VERSION = 1;
+				DYLIB_CURRENT_VERSION = 1;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				INFOPLIST_FILE = CollectionViewLayouter/Info.plist;
+				INSTALL_PATH = "$(LOCAL_LIBRARY_DIR)/Frameworks";
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = abhishek.CollectionViewLayouter;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 3.0;
+				VERSIONING_SYSTEM = "apple-generic";
+				VERSION_INFO_PREFIX = "";
+			};
+			name = Release;
+		};
 		D3CF7F671E503E5E001F9B7A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -550,6 +703,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 11A36F39C6E82B2D7918FCB1 /* Pods-battleshipiOS.debug.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = battleshipiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -563,6 +717,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 34DEB5BEF872B1A55B97F631 /* Pods-battleshipiOS.release.xcconfig */;
 			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = battleshipiOS/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -605,6 +760,14 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		D34C374E1E7EFC4F002817EC /* Build configuration list for PBXNativeTarget "CollectionViewLayouter" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D34C374F1E7EFC4F002817EC /* Debug */,
+				D34C37501E7EFC4F002817EC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 		D3CF7F471E503E5E001F9B7A /* Build configuration list for PBXProject "battleshipiOS" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

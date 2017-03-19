@@ -1,4 +1,5 @@
 import UIKit
+import CollectionViewLayouter
 
 class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
     
@@ -11,19 +12,7 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
         super.viewDidLoad()
         collectionView?.delegate = self
         collectionView?.dataSource = self
-        layoutCells()
-    }
-    
-    func layoutCells() {
-        collectionView?.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
-        if let layout = collectionView?.collectionViewLayout as? UICollectionViewFlowLayout {
-            let minSpaceBetweenItems: CGFloat = 1
-            let minSpaceBetweenLines: CGFloat = 1
-            layout.minimumLineSpacing = minSpaceBetweenLines
-            layout.minimumInteritemSpacing = minSpaceBetweenItems
-            let cellWidth: CGFloat = (self.view.bounds.width - 16 - (9 * minSpaceBetweenItems)) / 10
-            layout.itemSize = CGSize(width: cellWidth, height: cellWidth)
-        }
+        Layouter.layout(view: collectionView!, cellsInSection: 10)
     }
 
     override func didReceiveMemoryWarning() {
