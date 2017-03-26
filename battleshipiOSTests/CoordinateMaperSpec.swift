@@ -22,8 +22,8 @@ class CoordinateMaperSpec: XCTestCase {
     
     func testShouldMapPassedAlphaCoordToNumericCoord() {
         let coord = "A1"
-        let expectedCoord = "01"
-        let mapedCoord: String = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+        let expectedCoord = [0,1]
+        let mapedCoord: [Int] = CoordinateMaper().mapToNumeric(alphaCoord: coord)
         XCTAssertEqual(mapedCoord, expectedCoord)
     }
     
@@ -35,6 +35,6 @@ class CoordinateMaperSpec: XCTestCase {
     }
     
     func testShouldConvertStringToInt() {
-        XCTAssertEqual("1".toInt(), 1)
+        XCTAssertEqual("1".splitIntoInt(), [0,1])
     }
 }

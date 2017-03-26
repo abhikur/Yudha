@@ -30,7 +30,9 @@
 		D3CF7F731E50661C001F9B7A /* urls.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3CF7F721E50661C001F9B7A /* urls.strings */; };
 		D3CF7F751E50746D001F9B7A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF7F741E50746D001F9B7A /* LocalizedString.swift */; };
 		D3E65FC51E879B670002CEEA /* GamePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E65FC31E879B670002CEEA /* GamePage.storyboard */; };
-		D3E65FC61E879B670002CEEA /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E65FC41E879B670002CEEA /* GamePage.swift */; };
+		D3E65FCE1E87D2E50002CEEA /* gamePageVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E65FCD1E87D2E50002CEEA /* gamePageVC.swift */; };
+		D3E65FD01E87D4CD0002CEEA /* myGridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E65FCF1E87D4CD0002CEEA /* myGridDataSource.swift */; };
+		D3E65FD21E87D6E20002CEEA /* oppGridDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E65FD11E87D6E20002CEEA /* oppGridDataSource.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -95,7 +97,9 @@
 		D3CF7F721E50661C001F9B7A /* urls.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = urls.strings; sourceTree = "<group>"; };
 		D3CF7F741E50746D001F9B7A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
 		D3E65FC31E879B670002CEEA /* GamePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamePage.storyboard; sourceTree = "<group>"; };
-		D3E65FC41E879B670002CEEA /* GamePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
+		D3E65FCD1E87D2E50002CEEA /* gamePageVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = gamePageVC.swift; sourceTree = "<group>"; };
+		D3E65FCF1E87D4CD0002CEEA /* myGridDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = myGridDataSource.swift; sourceTree = "<group>"; };
+		D3E65FD11E87D6E20002CEEA /* oppGridDataSource.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = oppGridDataSource.swift; sourceTree = "<group>"; };
 		F590DF8D544E8A81056BFEC8 /* Pods-battleshipiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-battleshipiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-battleshipiOSTests/Pods-battleshipiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -245,7 +249,9 @@
 			isa = PBXGroup;
 			children = (
 				D3E65FC31E879B670002CEEA /* GamePage.storyboard */,
-				D3E65FC41E879B670002CEEA /* GamePage.swift */,
+				D3E65FCD1E87D2E50002CEEA /* gamePageVC.swift */,
+				D3E65FCF1E87D4CD0002CEEA /* myGridDataSource.swift */,
+				D3E65FD11E87D6E20002CEEA /* oppGridDataSource.swift */,
 			);
 			path = GamePage;
 			sourceTree = "<group>";
@@ -518,6 +524,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D3E65FD01E87D4CD0002CEEA /* myGridDataSource.swift in Sources */,
+				D3E65FD21E87D6E20002CEEA /* oppGridDataSource.swift in Sources */,
 				D3CF7F751E50746D001F9B7A /* LocalizedString.swift in Sources */,
 				D39F75401E60BF1400669FF8 /* ShipPlacementVC.swift in Sources */,
 				D3CF7F521E503E5E001F9B7A /* Login.swift in Sources */,
@@ -526,6 +534,7 @@
 				D3CF7F501E503E5E001F9B7A /* AppDelegate.swift in Sources */,
 				D3E65FC61E879B670002CEEA /* GamePage.swift in Sources */,
 				D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */,
+				D3E65FCE1E87D2E50002CEEA /* gamePageVC.swift in Sources */,
 				D34C373F1E7DAF23002817EC /* Alert.swift in Sources */,
 				D3CF7F711E505E41001F9B7A /* Webservice.swift in Sources */,
 			);

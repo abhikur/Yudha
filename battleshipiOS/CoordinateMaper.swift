@@ -7,9 +7,9 @@ class CoordinateMaper {
         return "\(numToAlpha(splitedValue.first!))\(splitedValue[1])"
     }
 
-    func mapToNumeric(alphaCoord coord: String) -> String {
+    func mapToNumeric(alphaCoord coord: String) -> [Int] {
         let splitedValue = coord.split()
-        return "\(alphaToNum(splitedValue.first!))\(splitedValue[1])"
+        return "\(alphaToNum(splitedValue.first!))\(splitedValue[1])".splitIntoInt()
     }
  
     func alphaToNum(_ alpha: String) -> String {

@@ -65,9 +65,8 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     
     func fillCoords(coords: [String]) {
         coords.forEach({ (coord) in
-            let numericCoord: String = CoordinateMaper().mapToNumeric(alphaCoord: coord)
-            let nums:[Int] = numericCoord.splitIntoInt()
-            let cell = self.collectionView?.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
+            let numericCoord: [Int] = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+            let cell = self.collectionView?.cellForItem(at: IndexPath(item: numericCoord[1] - 1, section: numericCoord[0]))
             cell?.backgroundColor = UIColor.red
         })
     }
@@ -82,7 +81,7 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
                 else {
                     let gamePage = UIStoryboard.init(name: "GamePage", bundle: nil)
                     let gamePageVC = gamePage.instantiateViewController(withIdentifier: "gamePage")
-                    self.present(gamePageVC, animated: true, completion: nil)
+                    self.navigationController?.pushViewController(gamePageVC, animated: true)
                 }
             }
         })

@@ -1,3 +1,4 @@
 "login" = "http://localhost:5000/login";
 "placingOfShips" = "http://localhost:5000/placingOfShip";
 "makeReady" = "http://localhost:5000/makeReady";
+"usedSpaces" = "http://localhost:5000/usedSpace";
