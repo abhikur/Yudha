@@ -29,6 +29,8 @@
 		D3CF7F711E505E41001F9B7A /* Webservice.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF7F701E505E41001F9B7A /* Webservice.swift */; };
 		D3CF7F731E50661C001F9B7A /* urls.strings in Resources */ = {isa = PBXBuildFile; fileRef = D3CF7F721E50661C001F9B7A /* urls.strings */; };
 		D3CF7F751E50746D001F9B7A /* LocalizedString.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3CF7F741E50746D001F9B7A /* LocalizedString.swift */; };
+		D3E65FC51E879B670002CEEA /* GamePage.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = D3E65FC31E879B670002CEEA /* GamePage.storyboard */; };
+		D3E65FC61E879B670002CEEA /* GamePage.swift in Sources */ = {isa = PBXBuildFile; fileRef = D3E65FC41E879B670002CEEA /* GamePage.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -92,6 +94,8 @@
 		D3CF7F701E505E41001F9B7A /* Webservice.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Webservice.swift; sourceTree = "<group>"; };
 		D3CF7F721E50661C001F9B7A /* urls.strings */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.strings; path = urls.strings; sourceTree = "<group>"; };
 		D3CF7F741E50746D001F9B7A /* LocalizedString.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LocalizedString.swift; sourceTree = "<group>"; };
+		D3E65FC31E879B670002CEEA /* GamePage.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = GamePage.storyboard; sourceTree = "<group>"; };
+		D3E65FC41E879B670002CEEA /* GamePage.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GamePage.swift; sourceTree = "<group>"; };
 		F590DF8D544E8A81056BFEC8 /* Pods-battleshipiOSTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-battleshipiOSTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-battleshipiOSTests/Pods-battleshipiOSTests.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -195,6 +199,7 @@
 		D3CF7F4E1E503E5E001F9B7A /* battleshipiOS */ = {
 			isa = PBXGroup;
 			children = (
+				D3E65FC21E879B670002CEEA /* GamePage */,
 				D39F753A1E60BE5200669FF8 /* shipPlacement */,
 				D39F75391E60BE1A00669FF8 /* login */,
 				D3CF7F761E507762001F9B7A /* utils */,
@@ -234,6 +239,15 @@
 				D34C373E1E7DAF23002817EC /* Alert.swift */,
 			);
 			name = utils;
+			sourceTree = "<group>";
+		};
+		D3E65FC21E879B670002CEEA /* GamePage */ = {
+			isa = PBXGroup;
+			children = (
+				D3E65FC31E879B670002CEEA /* GamePage.storyboard */,
+				D3E65FC41E879B670002CEEA /* GamePage.swift */,
+			);
+			path = GamePage;
 			sourceTree = "<group>";
 		};
 		F9F8DC39313B76E80F7B8D1B /* Pods */ = {
@@ -385,6 +399,7 @@
 				D3CF7F731E50661C001F9B7A /* urls.strings in Resources */,
 				D3CF7F551E503E5E001F9B7A /* Login.storyboard in Resources */,
 				D39F753C1E60BE8E00669FF8 /* ShipPlacement.storyboard in Resources */,
+				D3E65FC51E879B670002CEEA /* GamePage.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -509,6 +524,7 @@
 				D39F75421E61498100669FF8 /* ShipPlacementCell.swift in Sources */,
 				D324E1971E62D307000FCBFC /* Cells.swift in Sources */,
 				D3CF7F501E503E5E001F9B7A /* AppDelegate.swift in Sources */,
+				D3E65FC61E879B670002CEEA /* GamePage.swift in Sources */,
 				D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */,
 				D34C373F1E7DAF23002817EC /* Alert.swift in Sources */,
 				D3CF7F711E505E41001F9B7A /* Webservice.swift in Sources */,

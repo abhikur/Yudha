@@ -40,31 +40,49 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
+        let parameters: [String: Any] = getparamsForPlaceShipRequest(indexPath: indexPath)
+        let url = URL(string: localizedString("placingOfShips", table: "urls"))
+        
+        Webservice().post(url: url!, parameters: parameters, completion: { res in
+            if let coords = res.result.value as? [String] {
+                let _ = self.ships.popLast()
+                self.fillCoords(coords: coords)
+                if self.ships.count == 0 {
+                    self.sendReadyRequest()
+                }
+            }
+        })
+    }
+    
+    func getparamsForPlaceShipRequest(indexPath: IndexPath) -> [String: Any] {
         var parameters: [String: Any] = [:]
-        parameters["shipSize"] = ships.popLast()
+        parameters["shipSize"] = ships.last
         parameters["align"] = alignmentControl?.selectedSegmentIndex == 0 ? "horizontal" : "vertical"
         let coord: String = CoordinateMaper().mapToAlpha(numericCoord: "\(indexPath.section)\(indexPath.item + 1)")
         parameters["coordinate"] = coord
-        let url = URL(string: localizedString("placingOfShips", table: "urls"))
-        Webservice().post(url: url!, parameters: parameters, completion: { res in
-            if let coords = res.result.value as? [String] {
-                coords.forEach({ (coord) in
-                    let numericCoord: String = CoordinateMaper().mapToNumeric(alphaCoord: coord)
-                    let nums:[Int] = numericCoord.splitIntoInt()
-                    let cell = collectionView.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
-                    cell?.backgroundColor = UIColor.red
-                })
-                if self.ships.count == 0 {
-                    print("player is ready ")
-                    Webservice().get(url: URL(string:localizedString("makeReady", table: "urls"))!, completion: { (res) in
-                        if let resData = res.result.value as? [String: Any] {
-                            print(resData)
-                        }
-                        else {
-                            let alertController = Alert.makeWithoutAction(title: "Ready...", msg: "let the enemy ready")
-                            self.present(alertController, animated: true, completion: nil)
-                        }
-                    })
+        return parameters
+    }
+    
+    func fillCoords(coords: [String]) {
+        coords.forEach({ (coord) in
+            let numericCoord: String = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+            let nums:[Int] = numericCoord.splitIntoInt()
+            let cell = self.collectionView?.cellForItem(at: IndexPath(item: nums[1] - 1, section: nums[0]))
+            cell?.backgroundColor = UIColor.red
+        })
+    }
+    
+    func sendReadyRequest() {
+        Webservice().get(url: URL(string:localizedString("makeReady", table: "urls"))!, completion: { (res) in
+            if let resData = res.result.value as? [String: Bool] {
+                if(resData["isReady"] == false) {
+                    let alertController = Alert.makeWithoutAction(title: "Ready...", msg: "let the enemy ready")
+                    self.present(alertController, animated: true, completion: nil)
+                }
+                else {
+                    let gamePage = UIStoryboard.init(name: "GamePage", bundle: nil)
+                    let gamePageVC = gamePage.instantiateViewController(withIdentifier: "gamePage")
+                    self.present(gamePageVC, animated: true, completion: nil)
                 }
             }
         })

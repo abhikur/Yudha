@@ -3,5 +3,24 @@
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
     </dependencies>
-    <scenes/>
+    <scenes>
+        <!--Game Page-->
+        <scene sceneID="w7w-H7-JmS">
+            <objects>
+                <viewController storyboardIdentifier="gamePage" id="MAo-BA-CcE" customClass="GamePage" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="dmg-k5-0io"/>
+                        <viewControllerLayoutGuide type="bottom" id="Dgi-wh-396"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="KSU-6S-7em">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="FDB-Vp-rqm" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="278" y="200"/>
+        </scene>
+    </scenes>
 </document>
