@@ -11,7 +11,6 @@
 		3EE3A67B7F7DB6395C7FE911 /* Pods_battleshipiOSTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 89D3EAB7F89C1DEE417D7E3B /* Pods_battleshipiOSTests.framework */; };
 		D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1911E62AF05000FCBFC /* CoordinateMaper.swift */; };
 		D324E1951E62B854000FCBFC /* CoordinateMaperSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */; };
-		D324E1971E62D307000FCBFC /* Cells.swift in Sources */ = {isa = PBXBuildFile; fileRef = D324E1961E62D307000FCBFC /* Cells.swift */; };
 		D34C373F1E7DAF23002817EC /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = D34C373E1E7DAF23002817EC /* Alert.swift */; };
 		D34C37491E7EFC4F002817EC /* CollectionViewLayouter.h in Headers */ = {isa = PBXBuildFile; fileRef = D34C37471E7EFC4F002817EC /* CollectionViewLayouter.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		D34C374C1E7EFC4F002817EC /* CollectionViewLayouter.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */; };
@@ -74,7 +73,6 @@
 		89D3EAB7F89C1DEE417D7E3B /* Pods_battleshipiOSTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_battleshipiOSTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D324E1911E62AF05000FCBFC /* CoordinateMaper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateMaper.swift; sourceTree = "<group>"; };
 		D324E1941E62B854000FCBFC /* CoordinateMaperSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CoordinateMaperSpec.swift; sourceTree = "<group>"; };
-		D324E1961E62D307000FCBFC /* Cells.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cells.swift; sourceTree = "<group>"; };
 		D34C373E1E7DAF23002817EC /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		D34C37451E7EFC4F002817EC /* CollectionViewLayouter.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = CollectionViewLayouter.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		D34C37471E7EFC4F002817EC /* CollectionViewLayouter.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CollectionViewLayouter.h; sourceTree = "<group>"; };
@@ -173,7 +171,6 @@
 				D39F753B1E60BE8E00669FF8 /* ShipPlacement.storyboard */,
 				D39F753F1E60BF1400669FF8 /* ShipPlacementVC.swift */,
 				D39F75411E61498100669FF8 /* ShipPlacementCell.swift */,
-				D324E1961E62D307000FCBFC /* Cells.swift */,
 			);
 			name = shipPlacement;
 			sourceTree = "<group>";
@@ -530,9 +527,7 @@
 				D39F75401E60BF1400669FF8 /* ShipPlacementVC.swift in Sources */,
 				D3CF7F521E503E5E001F9B7A /* Login.swift in Sources */,
 				D39F75421E61498100669FF8 /* ShipPlacementCell.swift in Sources */,
-				D324E1971E62D307000FCBFC /* Cells.swift in Sources */,
 				D3CF7F501E503E5E001F9B7A /* AppDelegate.swift in Sources */,
-				D3E65FC61E879B670002CEEA /* GamePage.swift in Sources */,
 				D324E1921E62AF05000FCBFC /* CoordinateMaper.swift in Sources */,
 				D3E65FCE1E87D2E50002CEEA /* gamePageVC.swift in Sources */,
 				D34C373F1E7DAF23002817EC /* Alert.swift in Sources */,
