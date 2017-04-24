@@ -12,6 +12,7 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
         super.viewDidLoad()
         collectionView?.delegate = self
         collectionView?.dataSource = self
+        collectionView?.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
         Layouter.layout(view: collectionView!, cellsInSection: 10)
     }
 
@@ -40,33 +41,28 @@ class ShipPlacementVC: UIViewController, UICollectionViewDataSource, UICollectio
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
     
-        let parameters: [String: Any] = getparamsForPlaceShipRequest(indexPath: indexPath)
-        let url = URL(string: localizedString("placingOfShips", table: "urls"))
+        let alignment = alignmentControl?.selectedSegmentIndex == 0 ? "horizontal" : "vertical"
+        let ship = Ship(shipSize: ships.last!, alignment: alignment)
+        let coord: String = CoordinateMaper().mapToAlpha(numericCoord: Coord(row: indexPath.section, column: indexPath.item + 1))
         
-        Webservice().post(url: url!, parameters: parameters, completion: { res in
-            if let coords = res.result.value as? [String] {
+        let shipPlacer = ShipPlacer(webService: Webservice())
+        do {
+            try shipPlacer.place(ship, at: coord) { coords in
                 let _ = self.ships.popLast()
                 self.fillCoords(coords: coords)
                 if self.ships.count == 0 {
                     self.sendReadyRequest()
                 }
             }
-        })
-    }
-    
-    func getparamsForPlaceShipRequest(indexPath: IndexPath) -> [String: Any] {
-        var parameters: [String: Any] = [:]
-        parameters["shipSize"] = ships.last
-        parameters["align"] = alignmentControl?.selectedSegmentIndex == 0 ? "horizontal" : "vertical"
-        let coord: String = CoordinateMaper().mapToAlpha(numericCoord: "\(indexPath.section)\(indexPath.item + 1)")
-        parameters["coordinate"] = coord
-        return parameters
+        } catch let error {
+            print("\(error): Couldn't place the ship at this place")
+        }
     }
     
     func fillCoords(coords: [String]) {
         coords.forEach({ (coord) in
-            let numericCoord: [Int] = CoordinateMaper().mapToNumeric(alphaCoord: coord)
-            let cell = self.collectionView?.cellForItem(at: IndexPath(item: numericCoord[1] - 1, section: numericCoord[0]))
+            let numericCoord: Coord = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+            let cell = self.collectionView?.cellForItem(at: IndexPath(item: numericCoord.column - 1, section: numericCoord.row))
             cell?.backgroundColor = UIColor.red
         })
     }

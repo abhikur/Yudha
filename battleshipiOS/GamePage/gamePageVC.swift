@@ -11,6 +11,8 @@ class gamePageVC: UIViewController, UICollectionViewDataSource, UICollectionView
         
         myGrid?.dataSource = self
         opponentGrid?.dataSource = self
+        myGrid?.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
+        opponentGrid?.contentInset = UIEdgeInsetsMake(0, 0, 0, 0)
         Layouter.layout(view: opponentGrid!, cellsInSection: 10)
         Layouter.layout(view: myGrid!, cellsInSection: 10)
         
@@ -20,7 +22,6 @@ class gamePageVC: UIViewController, UICollectionViewDataSource, UICollectionView
     func getMyGridCells() {
         let url = URL(string: localizedString("usedSpaces", table: "urls"))
         Webservice().get(url: url!) { (res) in
-            print(res.result)
             if let coords = res.result.value as? [String] {
                 self.fillMyGrid(coords)
                 self.myGrid?.reloadData()
@@ -30,8 +31,8 @@ class gamePageVC: UIViewController, UICollectionViewDataSource, UICollectionView
     
     func fillMyGrid(_ coords: [String]) {
         coords.forEach { (coord) in
-            let numericCoord: [Int] = CoordinateMaper().mapToNumeric(alphaCoord: coord)
-            let cell = self.myGrid?.cellForItem(at: IndexPath(item: numericCoord[1] - 1, section: numericCoord[0]))
+            let numericCoord: Coord = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+            let cell = self.myGrid?.cellForItem(at: IndexPath(item: numericCoord.column - 1, section: numericCoord.row))
             cell?.backgroundColor = UIColor.red
         }
     }

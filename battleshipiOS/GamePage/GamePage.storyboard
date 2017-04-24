@@ -24,14 +24,17 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Battleship" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bRl-0n-0sG">
-                                <rect key="frame" x="24" y="30" width="327" height="21"/>
+                                <rect key="frame" x="24" y="25" width="327" height="21"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="ZcU-wO-Xuk">
-                                <rect key="frame" x="16" y="61" width="343" height="376"/>
+                                <rect key="frame" x="16" y="51" width="343" height="376"/>
                                 <color key="backgroundColor" red="0.88519318729999996" green="0.89451101040000003" blue="0.89451101040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="ZcU-wO-Xuk" secondAttribute="height" multiplier="343:376" id="LWC-HX-51v"/>
+                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Mo9-Zd-mXw">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -51,12 +54,8 @@
                                 </cells>
                             </collectionView>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="v6O-wl-F3y">
-                                <rect key="frame" x="87.5" y="447" width="200" height="200"/>
+                                <rect key="frame" x="76" y="432" width="228" height="227"/>
                                 <color key="backgroundColor" red="0.88519318729999996" green="0.89451101040000003" blue="0.89451101040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                <constraints>
-                                    <constraint firstAttribute="width" secondItem="v6O-wl-F3y" secondAttribute="height" multiplier="1:1" id="10p-5o-xn9"/>
-                                    <constraint firstAttribute="width" constant="200" id="aSh-fT-9El"/>
-                                </constraints>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="H9K-H7-AHd">
                                     <size key="itemSize" width="50" height="50"/>
                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -79,13 +78,14 @@
                         <color key="backgroundColor" red="0.88519318729999996" green="0.89451101040000003" blue="0.89451101040000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
                             <constraint firstItem="bRl-0n-0sG" firstAttribute="leading" secondItem="KSU-6S-7em" secondAttribute="leadingMargin" constant="8" id="2dr-97-CRp"/>
-                            <constraint firstItem="v6O-wl-F3y" firstAttribute="centerX" secondItem="KSU-6S-7em" secondAttribute="centerX" id="FOZ-NS-gkQ"/>
+                            <constraint firstItem="v6O-wl-F3y" firstAttribute="centerX" secondItem="KSU-6S-7em" secondAttribute="centerX" constant="2.5" id="FOZ-NS-gkQ"/>
                             <constraint firstAttribute="trailingMargin" secondItem="bRl-0n-0sG" secondAttribute="trailing" constant="8" id="GUg-Bf-oyc"/>
+                            <constraint firstItem="v6O-wl-F3y" firstAttribute="leading" secondItem="KSU-6S-7em" secondAttribute="leadingMargin" constant="60" id="P5F-TX-I49"/>
                             <constraint firstItem="ZcU-wO-Xuk" firstAttribute="leading" secondItem="KSU-6S-7em" secondAttribute="leadingMargin" id="QHh-CH-Hcg"/>
-                            <constraint firstItem="Dgi-wh-396" firstAttribute="top" secondItem="v6O-wl-F3y" secondAttribute="bottom" constant="20" id="RGv-bJ-eef"/>
-                            <constraint firstItem="bRl-0n-0sG" firstAttribute="top" secondItem="dmg-k5-0io" secondAttribute="bottom" constant="10" id="WAH-FC-lPZ"/>
-                            <constraint firstItem="ZcU-wO-Xuk" firstAttribute="top" secondItem="bRl-0n-0sG" secondAttribute="bottom" constant="10" id="e3U-Tc-BsX"/>
-                            <constraint firstItem="v6O-wl-F3y" firstAttribute="top" secondItem="ZcU-wO-Xuk" secondAttribute="bottom" constant="10" id="t6D-uh-xcM"/>
+                            <constraint firstItem="Dgi-wh-396" firstAttribute="top" secondItem="v6O-wl-F3y" secondAttribute="bottom" constant="8" id="RGv-bJ-eef"/>
+                            <constraint firstItem="bRl-0n-0sG" firstAttribute="top" secondItem="dmg-k5-0io" secondAttribute="bottom" constant="5" id="WAH-FC-lPZ"/>
+                            <constraint firstItem="ZcU-wO-Xuk" firstAttribute="top" secondItem="bRl-0n-0sG" secondAttribute="bottom" constant="5" id="e3U-Tc-BsX"/>
+                            <constraint firstItem="v6O-wl-F3y" firstAttribute="top" secondItem="ZcU-wO-Xuk" secondAttribute="bottom" constant="5" id="t6D-uh-xcM"/>
                             <constraint firstItem="ZcU-wO-Xuk" firstAttribute="trailing" secondItem="KSU-6S-7em" secondAttribute="trailingMargin" id="xKE-GW-8sm"/>
                         </constraints>
                     </view>

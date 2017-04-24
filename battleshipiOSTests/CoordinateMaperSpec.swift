@@ -22,14 +22,16 @@ class CoordinateMaperSpec: XCTestCase {
     
     func testShouldMapPassedAlphaCoordToNumericCoord() {
         let coord = "A1"
-        let expectedCoord = [0,1]
-        let mapedCoord: [Int] = CoordinateMaper().mapToNumeric(alphaCoord: coord)
-        XCTAssertEqual(mapedCoord, expectedCoord)
+        let expectedCoord = Coord(row: 0, column: 1)
+        let mapedCoord: Coord = CoordinateMaper().mapToNumeric(alphaCoord: coord)
+        
+        XCTAssertEqual(mapedCoord.column, expectedCoord.column)
+        XCTAssertEqual(mapedCoord.row, expectedCoord.row)
     }
     
     func testShouldMapPassedNumericCoordsToAlphaCoords() {
-        let coord = "01"
-        let expectedCoord = "A1"
+        let coord = Coord(row: 0, column: 10)
+        let expectedCoord = "A10"
         let mapedCoord: String = CoordinateMaper().mapToAlpha(numericCoord: coord)
         XCTAssertEqual(mapedCoord, expectedCoord)
     }

@@ -1,6 +1,5 @@
 public class Layouter {
     public class func layout(view: UICollectionView, cellsInSection: CGFloat) {
-        view.contentInset = UIEdgeInsetsMake(-64, 0, 0, 0)
         if let layout = view.collectionViewLayout as? UICollectionViewFlowLayout {
             let minSpaceBetweenItems: CGFloat = 1
             let minSpaceBetweenLines: CGFloat = 1
